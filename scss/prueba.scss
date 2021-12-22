@@ -1,0 +1,121 @@
+$color: #900C3F;
+
+header {
+	background-color: #FCF7FC;
+	width: 100%;
+
+	nav {
+		background-color: $color;
+		height: 60px;
+
+		ul {
+			list-style-type: none;
+			display: flex;
+			justify-content: space-between;
+			padding: 14px;
+
+
+			a {
+				text-decoration: none;
+				color: white;
+			}
+
+			a:hover {
+				color: black;
+			}
+		}
+	}
+
+	.titulo-header {
+		padding-top: 40px;
+
+		h1 {
+			color: black;
+			font-family: 'Pushster', cursive;
+			font-size: 100px;
+			display: flex;
+			justify-content: center;
+			animation-name: opacar;
+			animation-duration: 2s;
+		}
+
+		i {
+			padding-left: 15px;
+			color: black;
+		}
+		
+	}
+
+	@keyframes opacar {
+		0% {
+			opacity: 0;
+		}
+
+		100% {
+			opacity: 1;
+		}
+	}
+
+	.img-header img {
+		width: 100%;
+		animation-name: opacar2;
+		animation-duration: 7s;
+	}
+
+	@keyframes opacar2 {
+		0% {
+			opacity: 0;
+		}
+
+		100% {
+			opacity: 1;
+		}
+	}
+
+}
+
+
+main {
+	background-color: black;
+	padding-top: 40px;
+	height: 400px;
+
+	.box {
+		background-color: $color;
+
+		.box1 {
+			height: 300px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border: 2px solid white;
+
+			p {
+				color: white;
+			}
+		}
+
+		.box2 {
+			@extend .box1;
+		}
+
+		.box3 {
+			@extend .box1;
+		}
+
+	}
+}
+
+footer {
+	margin-top: 60px;
+
+	.div-footer {
+		display: flex;
+		justify-content: center;
+		background-color: black;
+
+		p {
+			color: white;
+		}
+	}
+}
